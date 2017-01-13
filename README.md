@@ -1,10 +1,16 @@
 # Turtle Graphics
 A [PostScript][postscript] script that traces [turtle graphics][].
 
-## Interpertation
+## Interpretation
+### Initialization
+* `size`: step size of the turtle.
+* `alpha`: the direction the turtle is facing.
+* `dalpha`: how much the direction changes when the turtle turns. 
+
+### Operation
 * `F`: move the turtle forward.
-* `P`: turn the turtle to the right.
-* `M`: turn the turtle to the left.
+* `R`: turn the turtle to the right.
+* `L`: turn the turtle to the left.
 
 [postscript]: https://en.wikipedia.org/wiki/PostScript
 [turtle graphics]: https://en.wikipedia.org/wiki/Turtle_graphics
