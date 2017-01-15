@@ -5,10 +5,6 @@
 save /cleanslate exch def
 %%EndProlog
 %%BeginSetup
-/dalpha 90 def
-/alpha 0 def
-/size 15 def
-
 /F {
     size alpha cos mul size alpha sin mul rlineto
 } def
@@ -23,10 +19,20 @@ save /cleanslate exch def
 %%EndSetup
 %%Page: title 1
 %%BeginPageSetup
+% Variables: A B
+% Constants: + -
+% Start: A
+% Rules: (A -> L B R A R B L) (B -> R A L B L A R)
+/dalpha 60 def
+/alpha 0 def
+/size 32 def
+
+/A {F} def
+/B {F} def
 %%EndPageSetup
 72 25.4 div dup scale
 0 0 moveto
-F L F L F  R F  F R F R F  L F L  F R F R F  F R  F L F L F  R
+L R A L B L A R R L B R A R B L R R A L B L A R L
 stroke
 showpage
 %%PageTrailer
