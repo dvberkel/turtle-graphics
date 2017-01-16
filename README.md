@@ -1,6 +1,15 @@
 # Turtle Graphics
 A [PostScript][postscript] script that traces [turtle graphics][].
 
+## Generation
+You can use `generator/turtle.js` to generate a particular sequence of turtle
+commands depending on an [L-system][l-system]. For example to generate turtle
+commands for the Sierprinski gasket
+
+```shell
+node generator/turtle.js generator/model/sierprinski.js 2
+```
+
 ## Interpretation
 ### Initialization
 * `size`: step size of the turtle.
@@ -22,3 +31,4 @@ gs -dSAFER -dNOPAUSE -dBATCH -sDEVICE=bbox turtle.ps
 
 [postscript]: https://en.wikipedia.org/wiki/PostScript
 [turtle graphics]: https://en.wikipedia.org/wiki/Turtle_graphics
+[l-system]: https://en.wikipedia.org/wiki/L-system
