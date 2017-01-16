@@ -1,3 +1,5 @@
+var model = require('./model/sierprinski.js');
+
 // Variables: A B
 // Constants: + -
 // Start: A
@@ -21,16 +23,7 @@ function show(words) {
     console.log(words.join(' '));
 }
 
-var start = ['A'];
-
-var productions = {
-    'A': ['L', 'B', 'R', 'A', 'R', 'B', 'L'],
-    'B': ['R', 'A', 'L', 'B', 'L', 'A', 'R'],
-    'L': ['L'],
-    'R': ['R']
-};
-
 var arg = process.argv[2];
 var n = arg ? parseInt(arg): 1;
 
-show(iterate(productions, start, n));
+show(iterate(model.productions, model.start, n));
