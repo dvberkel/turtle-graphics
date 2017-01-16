@@ -5,15 +5,15 @@ var model = require('./model/sierprinski.js');
 // Start: A
 // Rules: (A -> L B R A R B L) (B -> R A L B L A R)
 
-function apply_productions(productions, start) {
-    return start.map(function(word){ return productions[word]; })
+function apply_productions(productions, current) {
+    return current.map(function(word){ return productions[word]; })
         .reduce(function(acc, words){ return acc.concat(words); }, []);
 };
 
-function iterate(productions, start, n) {
-    var current = start;
+function iterate(model, n) {
+    var current = model.start;
     while (n > 0) {
-        current = apply_productions(productions, current);
+        current = apply_productions(model.productions, current);
         n--;
     }
     return current;
@@ -26,4 +26,4 @@ function show(words) {
 var arg = process.argv[2];
 var n = arg ? parseInt(arg): 1;
 
-show(iterate(model.productions, model.start, n));
+show(iterate(model, n));
