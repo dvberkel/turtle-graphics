@@ -1,7 +1,13 @@
 var l = require('./src/lindemyer');
-var model = require('./model/sierprinski');
 
-var arg = process.argv[2];
-var n = arg ? parseInt(arg): 1;
+if (process.argv.length < 3) {
+    throw new Error('not enough arguments');
+}
 
-l.show(l.iterate(model, n));
+var model_argument = process.argv[2];
+var model = require(model_argument);
+
+var stage_argument = process.argv[3];
+var stage = stage_argument ? parseInt(stage_argument): 1;
+
+l.show(l.iterate(model, stage));
