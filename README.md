@@ -29,6 +29,9 @@ following command:
 gs -dSAFER -dNOPAUSE -dBATCH -sDEVICE=bbox turtle.ps
 ```
 
+## Laser Cutting
+These images will transfer very well to a laser cutter.
+
 [postscript]: https://en.wikipedia.org/wiki/PostScript
 [turtle graphics]: https://en.wikipedia.org/wiki/Turtle_graphics
 [l-system]: https://en.wikipedia.org/wiki/L-system
